@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// Set Environment Variables
-	os.Setenv("DB_PASSWORD", "*SUA SENHA AQUI*")
+	os.Setenv("DB_PASSWORD", "_SUA SENHA AQUI_")
 
 	//Starting server
 	routes.CarregaRotas()
