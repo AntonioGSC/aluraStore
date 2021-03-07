@@ -20,6 +20,11 @@
               <td>{{.Preco}}</td>
               <td>{{.Quantidade}}</td>
               <td>
+                <button onclick="onEdit('{{.Id}}')" class="btn btn-info">
+                  Editar
+                </button>
+              </td>
+              <td>
                 <button onclick="onDelete('{{.Id}}')" class="btn btn-danger">
                   Deletar
                 </button>
@@ -42,6 +47,10 @@
     if (resposta) {
       window.location = `/delete?id=${id}`;
     }
+  }
+
+  function onEdit(id) {
+    window.location = `/edit?id=${id}`;
   }
 </script>
 {{end}}

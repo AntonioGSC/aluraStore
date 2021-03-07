@@ -11,4 +11,6 @@ func CarregaRotas() {
 	http.HandleFunc("/create", controller.Create)
 	http.HandleFunc("/insert", controller.Insert)
 	http.HandleFunc("/delete", controller.Delete)
+	http.HandleFunc("/edit", controller.Edit)
+	http.HandleFunc("/update", controller.Update)
 }
