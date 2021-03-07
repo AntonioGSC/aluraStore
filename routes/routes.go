@@ -3,11 +3,12 @@ package routes
 import (
 	"net/http"
 
-	"github.com/AntonioGSC/AluraStore/controllers"
+	"github.com/AntonioGSC/AluraStore/controller"
 )
 
 func CarregaRotas() {
-	http.HandleFunc("/", controllers.Index)
-	http.HandleFunc("/create", controllers.Create)
-	http.HandleFunc("/insert", controllers.Insert)
+	http.HandleFunc("/", controller.Index)
+	http.HandleFunc("/create", controller.Create)
+	http.HandleFunc("/insert", controller.Insert)
+	http.HandleFunc("/delete", controller.Delete)
 }

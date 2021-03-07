@@ -1,4 +1,4 @@
-package controllers
+package controller
 
 import (
 	"log"
@@ -39,5 +39,11 @@ func Insert(w http.ResponseWriter, r *http.Request) {
 
 		model.CriarNovoProduto(nome, descricao, precoConvertido, quantidadeConvertido)
 	}
+	http.Redirect(w, r, "/", 301)
+}
+
+func Delete(w http.ResponseWriter, r *http.Request) {
+	IDProduto := r.URL.Query().Get("id")
+	model.DeletaProduto(IDProduto)
 	http.Redirect(w, r, "/", 301)
 }
